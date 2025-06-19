@@ -15,10 +15,8 @@ pipeline {
         }
 
         stage('Run tests') {
-            stage('Security Audit') {
-                steps {
-                    bat 'dotnet test'
-                }
+            steps {
+                bat 'dotnet test'
             }
         }
     }
