@@ -8,6 +8,13 @@ pipeline {
             }
         }
 
+        stage('Restore the project') {
+            steps {
+                bat 'dotnet restore'
+            }
+        }
+
+
         stage('Build the project') {
             steps {
                 bat 'dotnet build'
